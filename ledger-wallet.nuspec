@@ -23,7 +23,7 @@
 
 A multi-crypto wallet app to secure thousands of coins and NFTs. [See all supported coins and tokens](https://www.ledger.com/supported-crypto-assets).
 
-![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
+![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@d0f86005ccfed2f1ac56a0ffc00febf5ad684d5c/Screenshot.png)
 
 ### Features
 
@@ -66,11 +66,11 @@ For future upgrade operations, consider opting into Chocolatey's `useRememberedA
 ```shell
 choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
-]]></description>
+]]>    </description>
     <releaseNotes><![CDATA[
 **Release Notes:** https://github.com/LedgerHQ/ledger-live/blob/%40ledgerhq/live-desktop%402.132.0/apps/ledger-live-desktop/RELEASE_NOTES.md
 **Full Changelog:** https://github.com/LedgerHQ/ledger-live/releases/tag/%40ledgerhq/live-desktop%402.132.0
-]]></releaseNotes>
+]]>    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

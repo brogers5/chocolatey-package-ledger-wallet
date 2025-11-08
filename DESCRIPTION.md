@@ -2,7 +2,7 @@
 
 A multi-crypto wallet app to secure thousands of coins and NFTs. [See all supported coins and tokens](https://www.ledger.com/supported-crypto-assets).
 
-![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
+![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@d0f86005ccfed2f1ac56a0ffc00febf5ad684d5c/Screenshot.png)
 
 ### Features
 
