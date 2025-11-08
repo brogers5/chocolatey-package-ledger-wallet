@@ -1,14 +1,14 @@
-## Ledger Live
+## Ledger Wallet (formerly Ledger Live)
 
 A multi-crypto wallet app to secure thousands of coins and NFTs. [See all supported coins and tokens](https://www.ledger.com/supported-crypto-assets).
 
-![Ledger Live Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-live@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
+![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
 
 ### Features
 
 #### Manage your crypto portfolio
 
-By coupling the Ledger Live wallet app with a Ledger crypto wallet, you can:
+By coupling the Ledger Wallet app with a Ledger crypto wallet, you can:
 
 - Securely execute transactions by validating them with your Ledger Hardware Wallet
 - Manage your portfolio as well as 1000s of other crypto assets
@@ -26,13 +26,13 @@ Your crypto will land safely in your Ledger crypto wallet.
 
 Swapping allows you to explore different crypto assets, protect your crypto from volatility, and diversify your portfolio.
 
-You can swap through the Ledger Live app without using fiat currencies.
+You can swap through the Ledger Wallet app without using fiat currencies.
 
 #### Stake crypto
 
 Put your crypto to work and get rewards.
 
-You can start staking coins through the Ledger Live crypto wallet app. Track your rewards in the Earn section and discover staking opportunities across chains.
+You can start staking coins through the Ledger Wallet crypto wallet app. Track your rewards in the Earn section and discover staking opportunities across chains.
 
 ## Package Notes
 

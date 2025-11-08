@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'Ledger Live *'
+  softwareName   = 'Ledger Wallet *'
   fileType       = 'EXE'
   silentArgs     = '/allusers /S'
   validExitCodes = @(0)

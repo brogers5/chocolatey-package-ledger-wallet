@@ -1,7 +1,7 @@
 ﻿$currentPath = Split-Path -Path $MyInvocation.MyCommand.Definition
-$publicKeyFilePath = Join-Path -Path $currentPath -ChildPath 'ledgerlive.pem'
-$checksumFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-live-desktop.sha512sum'
-$signatureFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-live-desktop.sha512sum.sig'
+$publicKeyFilePath = Join-Path -Path $currentPath -ChildPath 'ledgerwallet.pem'
+$checksumFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-wallet-desktop.sha512sum'
+$signatureFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-wallet-desktop.sha512sum.sig'
 
 function Update-OpenSSLPublicKey([string] $TagName) {
     $javascriptFile = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/LedgerHQ/ledger-live/$TagName/apps/ledger-live-desktop/src/main/updater/ledger-pubkey.ts" -UseBasicParsing

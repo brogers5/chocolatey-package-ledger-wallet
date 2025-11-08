@@ -40,13 +40,13 @@ function global:au_SearchReplace {
             '(<projectSourceUrl>)[^<]*(</projectSourceUrl>)' = "`$1https://github.com/$owner/$repository/tree/$($Latest.TagName)`$2"
             '(\*\*Release Notes:\*\* ).*$'                   = "`$1https://github.com/$owner/$repository/blob/$($Latest.TagName)/apps/ledger-live-desktop/RELEASE_NOTES.md"
             '(\*\*Full Changelog:\*\* ).*$'                  = "`$1https://github.com/$owner/$repository/releases/tag/$($Latest.TagName)"
-            '(<copyright>)[^<]*(</copyright>)'               = "`$1Copyright © $(Get-Date -Format yyyy) Ledger Live Team`$2"
+            '(<copyright>)[^<]*(</copyright>)'               = "`$1Copyright © $(Get-Date -Format yyyy) Ledger Wallet Team`$2"
         }
     }
 }
 
 function global:au_GetLatest {
-    $userAgent = 'Update checker of Chocolatey Community Package ''ledger-live'''
+    $userAgent = 'Update checker of Chocolatey Community Package ''ledger-wallet'''
     $latestVersionInfoUri = 'https://download.live.ledger.com/latest-win.yml'
 
     $tempFilePath = New-TemporaryFile
@@ -74,7 +74,7 @@ function global:au_GetLatest {
     $actualLatestVersion = [version] $latestRelease.tag_name.Substring(23)
 
     if ([version] $servedVersion -lt $actualLatestVersion) {
-        Write-Warning "A newer tag for Ledger Live Desktop was found (v$actualLatestVersion), but this build has not been published yet!"
+        Write-Warning "A newer tag for Ledger Wallet Desktop was found (v$actualLatestVersion), but this build has not been published yet!"
     }
 
     return @{

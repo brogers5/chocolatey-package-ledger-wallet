@@ -2,34 +2,34 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>ledger-live</id>
+    <id>ledger-wallet</id>
     <version>2.132.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-ledger-live/tree/v2.132.0</packageSourceUrl>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-ledger-wallet/tree/v2.132.0</packageSourceUrl>
     <owners>sublym0nal</owners>
-    <title>Ledger Live</title>
+    <title>Ledger Wallet</title>
     <authors>Ledger SAS</authors>
-    <projectUrl>https://www.ledger.com/ledger-live</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-live@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/ledger-live.png</iconUrl>
-    <copyright>Copyright © 2025 Ledger Live Team</copyright>
+    <projectUrl>https://shop.ledger.com/pages/ledger-wallet</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/ledger-wallet.png</iconUrl>
+    <copyright>Copyright © 2025 Ledger Wallet Team</copyright>
     <licenseUrl>https://shop.ledger.com/pages/ledger-live-terms-of-use</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/LedgerHQ/ledger-live/tree/%40ledgerhq/live-desktop%402.132.0</projectSourceUrl>
-    <docsUrl>https://support.ledger.com/topic?topic=ledger-live</docsUrl>
+    <docsUrl>https://support.ledger.com/topic?topic=ledger-wallet</docsUrl>
     <mailingListUrl>https://www.reddit.com/r/ledgerwallet/</mailingListUrl>
     <bugTrackerUrl>https://github.com/LedgerHQ/ledger-live/issues</bugTrackerUrl>
-    <tags>ledger-live ledger live nano hardware wallet cryptocurrency bip39 cross-platform 64-bit</tags>
+    <tags>ledger-wallet ledger nano hardware wallet cryptocurrency bip39 cross-platform 64-bit</tags>
     <summary>A crypto wallet app and Web3 gateway</summary>
-    <description><![CDATA[## Ledger Live
+    <description><![CDATA[## Ledger Wallet (formerly Ledger Live)
 
 A multi-crypto wallet app to secure thousands of coins and NFTs. [See all supported coins and tokens](https://www.ledger.com/supported-crypto-assets).
 
-![Ledger Live Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-live@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
+![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/Screenshot.png)
 
 ### Features
 
 #### Manage your crypto portfolio
 
-By coupling the Ledger Live wallet app with a Ledger crypto wallet, you can:
+By coupling the Ledger Wallet app with a Ledger crypto wallet, you can:
 
 - Securely execute transactions by validating them with your Ledger Hardware Wallet
 - Manage your portfolio as well as 1000s of other crypto assets
@@ -47,13 +47,13 @@ Your crypto will land safely in your Ledger crypto wallet.
 
 Swapping allows you to explore different crypto assets, protect your crypto from volatility, and diversify your portfolio.
 
-You can swap through the Ledger Live app without using fiat currencies.
+You can swap through the Ledger Wallet app without using fiat currencies.
 
 #### Stake crypto
 
 Put your crypto to work and get rewards.
 
-You can start staking coins through the Ledger Live crypto wallet app. Track your rewards in the Earn section and discover staking opportunities across chains.
+You can start staking coins through the Ledger Wallet crypto wallet app. Track your rewards in the Earn section and discover staking opportunities across chains.
 
 ## Package Notes
 
@@ -70,7 +70,7 @@ choco feature enable --name="'useRememberedArgumentsForUpgrades'"
     <releaseNotes><![CDATA[
 **Release Notes:** https://github.com/LedgerHQ/ledger-live/blob/%40ledgerhq/live-desktop%402.132.0/apps/ledger-live-desktop/RELEASE_NOTES.md
 **Full Changelog:** https://github.com/LedgerHQ/ledger-live/releases/tag/%40ledgerhq/live-desktop%402.132.0
-]]>    </releaseNotes>
+]]></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
