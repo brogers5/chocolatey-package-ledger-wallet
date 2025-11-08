@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/ledger-wallet.png" width="48" height="48"/> Chocolatey Package: [Ledger Wallet](https://community.chocolatey.org/packages/ledger-wallet)
+﻿# <img src="https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@484dc0d1c4068bd0b1bc45b4f7b550b9fd27cf9e/ledger-wallet.png" width="48" height="48"/> Chocolatey Package: [Ledger Wallet](https://community.chocolatey.org/packages/ledger-wallet)
 
 [![Latest package version shield](https://img.shields.io/chocolatey/v/ledger-wallet.svg)](https://community.chocolatey.org/packages/ledger-wallet)
 [![Total package download count shield](https://img.shields.io/chocolatey/dt/ledger-wallet.svg)](https://community.chocolatey.org/packages/ledger-wallet)

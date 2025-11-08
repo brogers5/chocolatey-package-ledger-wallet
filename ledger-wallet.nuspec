@@ -9,7 +9,7 @@
     <title>Ledger Wallet</title>
     <authors>Ledger SAS</authors>
     <projectUrl>https://shop.ledger.com/pages/ledger-wallet</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@61ab9919bb06f59e0b03ea62e5f7695e1a3d5bbd/ledger-wallet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@484dc0d1c4068bd0b1bc45b4f7b550b9fd27cf9e/ledger-wallet.png</iconUrl>
     <copyright>Copyright © 2025 Ledger Wallet Team</copyright>
     <licenseUrl>https://shop.ledger.com/pages/ledger-live-terms-of-use</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
