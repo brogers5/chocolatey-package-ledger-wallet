@@ -1,38 +1,32 @@
 ## Ledger Wallet (formerly Ledger Live)
 
-A multi-crypto wallet app to secure thousands of coins and NFTs. [See all supported coins and tokens](https://www.ledger.com/supported-crypto-assets).
+### Why do millions choose this crypto wallet app?
+
+Clearly verify transactions and confidently manage all types of crypto with a single, secure solution.
 
 ![Ledger Wallet Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-ledger-wallet@d0f86005ccfed2f1ac56a0ffc00febf5ad684d5c/Screenshot.png)
 
 ### Features
 
-#### Manage your crypto portfolio
+#### [Explore 15,000+ crypto](https://www.ledger.com/supported-crypto-assets)
 
-By coupling the Ledger Wallet app with a Ledger crypto wallet, you can:
+Bitcoin, Ethereum, Solana, XRP, stablecoins... you name it, it’s here.
 
-- Securely execute transactions by validating them with your Ledger Hardware Wallet
-- Manage your portfolio as well as 1000s of other crypto assets
-- Track your portfolio
+#### [CROSS CHAIN SWAP](https://shop.ledger.com/pages/swap) - Trade different
 
-**Buy, sell, swap, stake, and any other crypto transaction services are provided by third-party service providers.*
+Directly exchange one crypto for another. Compare service providers. Securely review and approve each transaction with your secure Ledger signer.
 
-#### Buy crypto
+- Keep your private keys safely offline
+- Diversify without complex trading platforms
+- Choose from a wide range of assets all in one place
 
-You can easily buy crypto with a credit/debit card or bank transfer. Choose from a range of service providers – Paypal, Ramp, MoonPay, Sardine – and select the option that works best for you.
+#### [EARN REWARDS](https://shop.ledger.com/pages/staking) - Put your crypto to work
 
-Your crypto will land safely in your Ledger crypto wallet.
+Grow your ETH, SOL and all your favorite stablecoins while maintaining full ownership of your assets and your keys.
 
-#### Swap crypto
-
-Swapping allows you to explore different crypto assets, protect your crypto from volatility, and diversify your portfolio.
-
-You can swap through the Ledger Wallet app without using fiat currencies.
-
-#### Stake crypto
-
-Put your crypto to work and get rewards.
-
-You can start staking coins through the Ledger Wallet crypto wallet app. Track your rewards in the Earn section and discover staking opportunities across chains.
+- Customize your earning strategy and track your rewards
+- Support your favorite networks and boost their security
+- A greener way to build your wealth without mining.
 
 ## Package Notes
 
