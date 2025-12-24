@@ -1,9 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
-$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  unzipLocation  = $toolsDir
   fileType       = 'EXE'
   url64bit       = 'https://download.live.ledger.com/ledger-live-desktop-2.133.0-win-x64.exe'
   softwareName   = 'Ledger Wallet *'
