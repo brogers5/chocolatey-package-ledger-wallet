@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ledger-wallet</id>
-    <version>2.137.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-ledger-wallet/tree/v2.137.0</packageSourceUrl>
+    <version>2.139.0</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-ledger-wallet/tree/v2.139.0</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>Ledger Wallet</title>
     <authors>Ledger SAS</authors>
@@ -13,7 +13,7 @@
     <copyright>Copyright © 2026 Ledger Wallet Team</copyright>
     <licenseUrl>https://shop.ledger.com/pages/ledger-live-terms-of-use</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/LedgerHQ/ledger-live/tree/%40ledgerhq/live-desktop%402.137.0</projectSourceUrl>
+    <projectSourceUrl>https://github.com/LedgerHQ/ledger-live/tree/%40ledgerhq/live-desktop%402.139.0</projectSourceUrl>
     <docsUrl>https://support.ledger.com/topic?topic=ledger-wallet</docsUrl>
     <mailingListUrl>https://www.reddit.com/r/ledgerwallet/</mailingListUrl>
     <bugTrackerUrl>https://github.com/LedgerHQ/ledger-live/issues</bugTrackerUrl>
@@ -62,8 +62,8 @@ choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
 ]]></description>
     <releaseNotes><![CDATA[
-**Release Notes:** https://github.com/LedgerHQ/ledger-live/blob/%40ledgerhq/live-desktop%402.137.0/apps/ledger-live-desktop/RELEASE_NOTES.md
-**Full Changelog:** https://github.com/LedgerHQ/ledger-live/releases/tag/%40ledgerhq/live-desktop%402.137.0
+**Release Notes:** https://github.com/LedgerHQ/ledger-live/blob/%40ledgerhq/live-desktop%402.139.0/apps/ledger-live-desktop/RELEASE_NOTES.md
+**Full Changelog:** https://github.com/LedgerHQ/ledger-live/releases/tag/%40ledgerhq/live-desktop%402.139.0
 ]]>    </releaseNotes>
   </metadata>
   <files>
