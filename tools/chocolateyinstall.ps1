@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  url64bit       = 'https://download.live.ledger.com/ledger-live-desktop-2.141.0-win-x64.exe'
+  url64bit       = 'https://download.live.ledger.com/ledger-live-desktop-2.143.0-win-x64.exe'
   softwareName   = 'Ledger Wallet *'
-  checksum64     = 'ef70f89e64c07b83100e990de643f70900f69e25a2b5ae72d79376cd67f2431385ed7d26c88b243fc7b1dbc88a8a6a5fb79ec352645ea845a5d0238a856742b0'
+  checksum64     = 'edb504d1351117e4308bf74f14c5816d31f40ff94c338b3d95e55afb87e87396c7ceee4e2b3beeec114dd2c22dc7158b292ab1d6bcdb645d5b0ceef443963635'
   checksumType64 = 'sha512'
   silentArgs     = '/S'
   validExitCodes = @(0)
