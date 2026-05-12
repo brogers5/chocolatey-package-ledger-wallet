@@ -54,17 +54,7 @@ function global:au_GetLatest {
     $latestVersionInfo = ConvertFrom-Yaml -Path $tempFilePath
     Remove-Item $tempFilePath -Force
 
-    #FXPSYaml may deserialize version as a DateTime object if it contains a non-zero patch number.
-    #Unfortunately, this is due to Ledger not abiding by the YAML specification.
-    #YAML documents should include a type tag (specifically, "!!str") if a value can be ambiguously interpreted.
-    #As I do not have control over the contents of this document, working around it by keying off the interpreted type.
-    $interpretedType = $latestVersionInfo.version.GetType()
-    if ($interpretedType -eq [DateTime]) {
-        $servedVersion = $latestVersionInfo.version.ToString('M.yyy.d')
-    }
-    else {
-        $servedVersion = $latestVersionInfo.version
-    }
+    $servedVersion = (Get-Version -Version $latestVersionInfo.path).Version.ToString()
 
     $checksumBytes = [System.Convert]::FromBase64String($latestVersionInfo.sha512) 
     $checksumString = ($checksumBytes | ForEach-Object ToString x2) -join ''
