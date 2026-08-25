@@ -3,8 +3,8 @@ $publicKeyFilePath = Join-Path -Path $currentPath -ChildPath 'ledgerwallet.pem'
 $checksumFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-wallet-desktop.sha512sum'
 $signatureFilePath = Join-Path -Path $currentPath -ChildPath 'ledger-wallet-desktop.sha512sum.sig'
 
-function Update-OpenSSLPublicKey([string] $TagName) {
-    $javascriptFile = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/LedgerHQ/ledger-live/$TagName/apps/ledger-live-desktop/src/main/updater/ledger-pubkey.ts" -UseBasicParsing
+function Update-OpenSSLPublicKey([string] $RefName) {
+    $javascriptFile = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/LedgerHQ/ledger-live/$RefName/apps/ledger-live-desktop/src/main/updater/ledger-pubkey.ts" -UseBasicParsing
 
     $rawPemContents = (Select-String -InputObject $javascriptFile.Content -Pattern '-----BEGIN PUBLIC KEY-----\n.*\n.*\n-----END PUBLIC KEY-----\n').Matches[0].Value
     $processedPemContents = $rawPemContents.Replace('\n', "`n")
