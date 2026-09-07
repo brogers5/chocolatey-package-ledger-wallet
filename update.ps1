@@ -77,7 +77,7 @@ function global:au_GetLatest {
 
     return @{
         Checksum64      = $checksumString
-        RefName         = '%40ledgerhq/live-desktop%40$servedVersion'
+        RefName         = "%40ledgerhq/live-desktop%40$servedVersion"
         SoftwareVersion = $servedVersion
         Url64           = "https://download.live.ledger.com/$($latestVersionInfo.path)"
         Version         = $servedVersion #This may change if building a package fix version
