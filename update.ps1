@@ -38,7 +38,16 @@ function global:au_SearchReplace {
     }
 
     if ($Latest.RefName -notmatch '^[0-9a-f]{7,40}$') {
-        $nuspecReplacements['(\*\*Full Changelog:\*\* ).*$'] = "`$1https://github.com/$owner/$repository/releases/tag/$($Latest.RefName)"
+        $fullChangelogUrl = "https://github.com/$owner/$repository/releases/tag/$($Latest.RefName)"
+        $nuspecPath = Join-Path $currentPath "$($Latest.PackageName).nuspec"
+        $nuspecContent = Get-Content -Path $nuspecPath -Raw
+
+        if ($nuspecContent -notmatch '(?m)^\*\*Full Changelog:\*\*') {
+            $nuspecReplacements['(?m)(?=^\]\]></releaseNotes>)'] = "**Full Changelog:** $fullChangelogUrl$([Environment]::NewLine)"
+        }
+        else {
+            $nuspecReplacements['(\*\*Full Changelog:\*\* ).*$'] = "`$1$fullChangelogUrl"
+        }
     }
     else {
         $nuspecReplacements['^\*\*Full Changelog:\*\* .*$'] = ''
