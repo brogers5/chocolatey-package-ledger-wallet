@@ -86,9 +86,9 @@ function global:au_GetLatest {
 
     return @{
         Checksum64           = $checksumString
-        ReleaseNotesRefName  = '351d14c7ee9733e850abfbf4418058ed14e52c0e'
+        ReleaseNotesRefName  = "%40ledgerhq/live-desktop%40$servedVersion"
         #This is typically the same as RepositoryTagRefName, but releases notes are sometimes published after tagging
-        RepositoryTagRefName = $null
+        RepositoryTagRefName = "%40ledgerhq/live-desktop%40$servedVersion"
         SoftwareVersion      = $servedVersion
         Url64                = "https://download.live.ledger.com/$($latestVersionInfo.path)"
         Version              = $servedVersion #This may change if building a package fix version
