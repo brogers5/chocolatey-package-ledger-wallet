@@ -50,7 +50,7 @@ function global:au_SearchReplace {
         }
     }
     else {
-        $nuspecReplacements['(?m)^\*\*Full Changelog:\*\*.*(?:\r?\n|$)'] = ''
+        $nuspecReplacements['(?m)^\*\*Full Changelog:\*\*[^\r\n]*(?:\r\n|\n|$)'] = ''
     }
 
     @{
