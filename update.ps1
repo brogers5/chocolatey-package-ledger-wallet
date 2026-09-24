@@ -64,7 +64,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $userAgent = 'Update checker of Chocolatey Community Package ''ledger-wallet'''
-    $latestVersionInfoUri = 'https://download.live.ledger.com/latest-win-4.21.0.yml'
+    $latestVersionInfoUri = 'https://download.live.ledger.com/latest-win.yml'
 
     $tempFilePath = New-TemporaryFile
     Invoke-WebRequest -Uri $latestVersionInfoUri -UserAgent $userAgent -Method Get -OutFile $tempFilePath
