@@ -13,7 +13,7 @@ function global:au_BeforeUpdate($Package) {
     #https://www.ledger.com/ledger-live/lld-signatures
 
     #Confirm integrity of the published checksums file
-    Update-OpenSSLPublicKey -RefName $Latest.RefName
+    Update-OpenSSLPublicKey -RefName $Latest.ReleaseNotesRefName
     Update-ChecksumFile -Version $Latest.SoftwareVersion
     Update-SignatureFile -Version $Latest.SoftwareVersion
     Confirm-Signature
@@ -32,13 +32,13 @@ function global:au_BeforeUpdate($Package) {
 function global:au_SearchReplace {
     $nuspecReplacements = @{
         '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)' = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
-        '(<projectSourceUrl>)[^<]*(</projectSourceUrl>)' = "`$1https://github.com/$owner/$repository/tree/$($Latest.RefName)`$2"
-        '(\*\*Release Notes:\*\* ).*$'                   = "`$1https://github.com/$owner/$repository/blob/$($Latest.RefName)/apps/ledger-live-desktop/RELEASE_NOTES.md"
+        '(<projectSourceUrl>)[^<]*(</projectSourceUrl>)' = "`$1https://github.com/$owner/$repository/tree/$($Latest.ReleaseNotesRefName)`$2"
+        '(\*\*Release Notes:\*\* ).*$'                   = "`$1https://github.com/$owner/$repository/blob/$($Latest.ReleaseNotesRefName)/apps/ledger-live-desktop/RELEASE_NOTES.md"
         '(<copyright>)[^<]*(</copyright>)'               = "`$1Copyright © $(Get-Date -Format yyyy) Ledger Wallet Team`$2"
     }
 
-    if ($Latest.RefName -notmatch '^[0-9a-f]{7,40}$') {
-        $fullChangelogUrl = "https://github.com/$owner/$repository/releases/tag/$($Latest.RefName)"
+    if ($null -ne $Latest.RepositoryTagRefName) {
+        $fullChangelogUrl = "https://github.com/$owner/$repository/releases/tag/$($Latest.RepositoryTagRefName)"
         $nuspecPath = Join-Path $currentPath "$($Latest.PackageName).nuspec"
         $nuspecContent = Get-Content -Path $nuspecPath -Raw
 
@@ -50,7 +50,7 @@ function global:au_SearchReplace {
         }
     }
     else {
-        $nuspecReplacements['^\*\*Full Changelog:\*\* .*$'] = ''
+        $nuspecReplacements['(?m)^\*\*Full Changelog:\*\*.*(?:\r?\n|$)'] = ''
     }
 
     @{
@@ -64,7 +64,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $userAgent = 'Update checker of Chocolatey Community Package ''ledger-wallet'''
-    $latestVersionInfoUri = 'https://download.live.ledger.com/latest-win.yml'
+    $latestVersionInfoUri = 'https://download.live.ledger.com/latest-win-4.21.0.yml'
 
     $tempFilePath = New-TemporaryFile
     Invoke-WebRequest -Uri $latestVersionInfoUri -UserAgent $userAgent -Method Get -OutFile $tempFilePath
@@ -85,11 +85,13 @@ function global:au_GetLatest {
     }
 
     return @{
-        Checksum64      = $checksumString
-        RefName         = '351d14c7ee9733e850abfbf4418058ed14e52c0e'
-        SoftwareVersion = $servedVersion
-        Url64           = "https://download.live.ledger.com/$($latestVersionInfo.path)"
-        Version         = $servedVersion #This may change if building a package fix version
+        Checksum64           = $checksumString
+        ReleaseNotesRefName  = '351d14c7ee9733e850abfbf4418058ed14e52c0e'
+        #This is typically the same as RepositoryTagRefName, but releases notes are sometimes published after tagging
+        RepositoryTagRefName = $null
+        SoftwareVersion      = $servedVersion
+        Url64                = "https://download.live.ledger.com/$($latestVersionInfo.path)"
+        Version              = $servedVersion #This may change if building a package fix version
     }
 }
 
